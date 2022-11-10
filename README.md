@@ -48,7 +48,7 @@ index fafa86f..299215d 100644
      if args.env_num:
          config['env_num'] = args.env_num
 ```
-训练模型
+# 4. 训练模型
 ```
 GLOG_v=4 python train.py
 ```
