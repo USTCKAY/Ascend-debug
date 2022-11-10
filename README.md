@@ -6,7 +6,7 @@ python version:3.7  CANN version：5.1.RC2
 ```
 pip install paddlepaddle-0.0.0-cp37-cp37m-linux_aarch64.whl
 ```
-# 2. 安装Cusrtom NPU插件
+# 2. 安装Custom NPU插件
 直接安装提供的编译好的Custom NPU包
 ```
 pip install paddle_custom_npu-0.0.0-cp37-cp37m-linux_aarch64.whl
