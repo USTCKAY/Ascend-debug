@@ -1,0 +1,20 @@
+[TRACE] GE(8475,python):2023-02-01-02:51:15.054.597 [status:INIT] [ge_api.cc:194]8475 GEInitializeImpl:GEInitialize start
+[TRACE] GE(8475,python):2023-02-01-02:51:15.102.262 [status:RUNNING] [ge_api.cc:259]8475 GEInitializeImpl:Initializing environment
+[TRACE] GE(8475,python):2023-02-01-02:51:19.380.294 [status:STOP] [ge_api.cc:302]8475 GEInitializeImpl:GEInitialize finished
+[ERROR] FE(8475,python):2023-02-01-02:53:06.207.488 [trans_node_insertion.cc:519]8475 InsertTransOpByConcecutiveStrategy:"[GraphOpt][Trans][InsertTransByConcec] We do not support trans from NC1HWC0 to ND between Transpose_in_0 and Transpose."
+[ERROR] FE(8475,python):2023-02-01-02:53:06.207.771 [fe_graph_optimizer.cc:388]8475 InsertTransNodesForAllGraph:"[GraphOpt][Trans][Insert] Failed to insert format and dtype transfer op for graph 20230201025306_online."
+[ERROR] FE(8475,python):2023-02-01-02:53:06.207.896 [fe_graph_optimizer.cc:525]8475 OptimizeOriginalGraphJudgeInsert:"[Process][" "FEGraphOptimizer" "_" "InsertTransNodesForAllGraph" "] failed"
+[ERROR] GE(8475,python):2023-02-01-02:53:06.208.192 [graph_optimize.cc:232]8475 OptimizeOriginalGraphJudgeInsert: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Call][OptimizeOriginalGraphJudgeInsert] failed, ret:-1, engine_name:AIcoreEngine, graph_name:20230201025306_online
+[ERROR] GE(8475,python):2023-02-01-02:53:06.208.339 [graph_manager.cc:780]8475 PreRunOptimizeOriginalGraph: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Process][GraphManager_stages.optimizer.OptimizeOriginalGraphJudgeInsert] failed
+[ERROR] GE(8475,python):2023-02-01-02:53:06.208.453 [graph_manager.cc:3313]8475 OptimizeGraph: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Run][PreRunOptimizeOriginalGraph] failed for graph:20230201025306_online, session_id:84
+[ERROR] GE(8475,python):2023-02-01-02:53:06.208.460 [pne_model_builder.cc:114]8475 OptimizeGraph: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Optimize][Graph] failed, graph = 20230201025306_online, engine = NPU
+[ERROR] GE(8475,python):2023-02-01-02:53:06.208.466 [graph_manager.cc:920]8475 PreRun: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Build][Model] failed, session_id:84, graph_id:84.
+[ERROR] GE(8475,python):2023-02-01-02:53:06.209.400 [graph_manager.cc:963]8475 StartForRunGraph: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Call][PreRun] Failed, graph_id:84, session_id:84.
+[ERROR] GE(8475,python):2023-02-01-02:53:06.209.406 [graph_manager.cc:1362]8475 BuildGraph: ErrorNo: 4294967295(failed) [COMP][PRE_OPT][Call][StartForRunGraph] failed! graph_id:84.
+[ERROR] GE(8475,python):2023-02-01-02:53:06.209.435 [ge_generator.cc:1549]8475 BuildModel: ErrorNo: 1343266819(Graph manager build graph failed.) [COMP][DEFAULT][Build][Graph] fail, graph id: 84
+[ERROR] ASCENDCL(8475,python):2023-02-01-02:53:06.209.461 [local_compiler.cpp:93]8475 OnlineCompileAndDump: [COMP][DEFAULT][Build][SingleOpModel]call ge interface generator.BuildSingleOpModel failed. ge result = 4294967295
+[ERROR] ASCENDCL(8475,python):2023-02-01-02:53:06.209.481 [local_compiler.cpp:106]8475 OnlineCompileAndDump: [COMP][DEFAULT]OnlineCompileAndDump failed
+[ERROR] ASCENDCL(8475,python):2023-02-01-02:53:06.209.595 [acl_resource_manager.cpp:468]8475 GetOpModel: [FINAL][FINAL][Build][Op]Fail to build op model
+[ERROR] ASCENDCL(8475,python):2023-02-01-02:53:06.209.611 [op_compiler.cpp:177]8475 aclopCompileAndExecute: [FINAL][FINAL]build op model failed, result = 500002
+[EVENT] IDEDH(8475,python):2023-02-01-02:53:08.491.827 [adx_server_manager.cpp:27][tid:8475]>>> start to deconstruct adx server manager
+[EVENT] IDEDH(8475,python):2023-02-01-02:53:08.493.620 [adx_server_manager.cpp:27][tid:8475]>>> start to deconstruct adx server manager
